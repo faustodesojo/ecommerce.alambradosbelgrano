@@ -4,6 +4,14 @@ const categorias = document.querySelectorAll(".col-md-12.categoria.imagen-fondo"
 categorias.forEach(categoria => {
   categoria.style.cursor = "pointer";
 });
+const subcategorias = document.querySelectorAll(".subcategoria");
+subcategorias.forEach(subcategoria => {
+  const links = subcategoria.querySelectorAll("a");
+  links.forEach(link => {
+    link.style.cursor = "pointer";
+  });
+});
+
 input3.type = "number";
 // const nuevoContenido = '<p><select id="pregunta_4_respuesta" name="pr_preg4" class="form-control" required placeholder="">' +
 //     '<option value="Efectivo">Efectivo</option>' +
