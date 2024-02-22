@@ -6,9 +6,9 @@ categorias.forEach(categoria => {
 });
 const subcategorias = document.querySelectorAll(".subcategoria");
 subcategorias.forEach(subcategoria => {
-  const links = subcategoria.querySelectorAll("a");
-  links.forEach(link => {
-    link.style.cursor = "pointer";
+  const titulos = subcategoria.querySelectorAll(".subcategoria-titulo");
+  titulos.forEach(titulo => {
+    titulo.style.cursor = "pointer";
   });
 });
 
