@@ -1,13 +1,15 @@
 // const input4 = document.getElementById("pregunta_4_respuesta");
 const input3 = document.getElementById("pregunta_3_respuesta");
-const categorias = document.querySelectorAll(".col-md-12.categoria.imagen-fondo");
-categorias.forEach(categoria => {
+const categorias = document.querySelectorAll(
+  ".col-md-12.categoria.imagen-fondo"
+);
+categorias.forEach((categoria) => {
   categoria.style.cursor = "pointer";
 });
 const subcategorias = document.querySelectorAll(".subcategoria");
-subcategorias.forEach(subcategoria => {
+subcategorias.forEach((subcategoria) => {
   const titulos = subcategoria.querySelectorAll(".subcategoria-titulo");
-  titulos.forEach(titulo => {
+  titulos.forEach((titulo) => {
     titulo.style.cursor = "pointer";
   });
 });
@@ -19,55 +21,55 @@ input3.type = "number";
 //     '<option value="Mercado Pago">Mercado Pago (+ 10%)</option>' +
 //     '</select></p>';
 // input4.outerHTML = nuevoContenido;
-const footerNavbar =document.querySelector(".navbar-footer");
+const footerNavbar = document.querySelector(".navbar-footer");
 const nav = document.getElementById("mainNav");
-footerNavbar.style.display = "none";
-const navbarElement =document.createElement("div");
-navbarElement.className = "navbar-footer";
-navbarElement.innerHTML = `
-<div style="" class="navbar-footer">                                                
-                                <button type="button" style="" onclick="openNav()" class="btn my-btn-primary animated fadeIn" id="mobile-nav-toggle">
-                                        <i class="fa fa-bars"></i>
-                                </button>
-                                <button class="btn my-btn-primary" id="boton_buscador" style="HCHdisplay:none;" type="button" onclick="mostrar_buscador();">
-                                        <i id="icono_buscador" class="fas fa-search"></i>
-                                </button>
-                                <button class="btn helper_changuito my-btn-primary" type="button" onclick="mostrar_resumen_pedido();">
-                                        <i id="icono_resumen_pedido" class="fas fa-shopping-bag"></i>
-                                        <div class="badge hchbadge-primary pedido_productos_cantidad_total">0</div>
-                                </button>                
-                                <!-- <div style="background-color:#000000!important; padding-left: 10px; z-index:999999;"></div> -->
-                </div>
-    `;
-    nav.appendChild(navbarElement);
+nav.appendChild(footerNavbar);
 const botonBuscador = document.getElementById("boton_buscador");
 const mobileNavToggle = document.getElementById("mobile-nav-toggle");
 const carritoCompra = document.querySelector(".helper_changuito");
-botonBuscador.style.order = "1"; 
+botonBuscador.style.order = "1";
 mobileNavToggle.style.order = "2";
 carritoCompra.style.order = "3";
-nav.style.flexDirection = "column"
-navbarElement.style.justifyContent = "space-between"
+nav.style.flexDirection = "column";
 const productos = document.querySelectorAll(".producto-box-main");
 
-productos.forEach(producto => {
+productos.forEach((producto) => {
   producto.style.cursor = "pointer";
 });
+
+// OCULTAR IMG DE SLIDER CUANDO EL CARRITO ESTA ABIERTO
+
 const slider = document.querySelector(".slider-container");
 const carrito = document.getElementById("icono_resumen_pedido");
 function handleCarritoClassChange() {
-  if (carrito.classList.contains("fas") && carrito.classList.contains("fa-arrow-left")) {
+  if (
+    carrito.classList.contains("fas") &&
+    carrito.classList.contains("fa-arrow-left")
+  ) {
     slider.style.display = "none";
   } else {
     slider.style.display = "";
   }
 }
 const observer = new MutationObserver(handleCarritoClassChange);
-observer.observe(carrito, { attributes: true, attributeFilter: ['class'] });
+observer.observe(carrito, { attributes: true, attributeFilter: ["class"] });
 handleCarritoClassChange();
 
-const categoria = document.querySelector(".row")
+// AGREGAR IMG A SUBCATEGORIAS
+const categoria = document.querySelector(".row");
 const subCategorias = categoria.getElementsByClassName("subcategoria");
 
-subCategorias[0].style.backgroundImage = "url('https://yourfiles.cloud/uploads/4f7c175d6fb1f59672542cd74e76ae51/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2815%29.png')"
-subCategorias[1].style.backgroundImage = "url('https://yourfiles.cloud/uploads/9ba84e9f5a47d0e6f868a19e2169b462/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2814%29.png')"
+subCategorias[0].style.backgroundImage =
+  "url('https://yourfiles.cloud/uploads/4f7c175d6fb1f59672542cd74e76ae51/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2815%29.png')";
+subCategorias[1].style.backgroundImage =
+  "url('https://yourfiles.cloud/uploads/9ba84e9f5a47d0e6f868a19e2169b462/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2814%29.png')";
+
+// IMAGEN HEAD LOGO
+
+var link = document.createElement("link");
+link.rel = "icon";
+link.type = "image/svg+xml";
+link.href =
+  "https://yourfiles.cloud/uploads/040d9f86f5fb8ebc4b2d062f806cd221/alambradosbelgrano%20-%20Alambres%20Distribuidora.png";
+var head = document.head;
+head.appendChild(link);
