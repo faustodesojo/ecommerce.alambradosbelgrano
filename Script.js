@@ -22,6 +22,8 @@ input3.type = "number";
 //     '</select></p>';
 // input4.outerHTML = nuevoContenido;
 const footerNavbar = document.querySelector(".navbar-footer");
+const navbarFooterContainer = document.querySelector(".navbar-footer-container");
+navbarFooterContainer.style.display = "none";
 const nav = document.getElementById("mainNav");
 nav.appendChild(footerNavbar);
 const botonBuscador = document.getElementById("boton_buscador");
