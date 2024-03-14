@@ -58,13 +58,13 @@ observer.observe(carrito, { attributes: true, attributeFilter: ["class"] });
 handleCarritoClassChange();
 
 // AGREGAR IMG A SUBCATEGORIAS
-const categoria = document.querySelector(".row");
-const subCategorias = categoria.getElementsByClassName("subcategoria");
+// const categoria = document.querySelector(".row");
+// const subCategorias = categoria.getElementsByClassName("subcategoria");
 
-subCategorias[0].style.backgroundImage =
-  "url('https://yourfiles.cloud/uploads/4f7c175d6fb1f59672542cd74e76ae51/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2815%29.png')";
-subCategorias[1].style.backgroundImage =
-  "url('https://yourfiles.cloud/uploads/9ba84e9f5a47d0e6f868a19e2169b462/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2814%29.png')";
+// subCategorias[0].style.backgroundImage =
+//   "url('https://yourfiles.cloud/uploads/4f7c175d6fb1f59672542cd74e76ae51/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2815%29.png')";
+// subCategorias[1].style.backgroundImage =
+//   "url('https://yourfiles.cloud/uploads/9ba84e9f5a47d0e6f868a19e2169b462/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2814%29.png')";
 
 // IMAGEN HEAD LOGO
 
@@ -75,3 +75,26 @@ link.href =
   "https://yourfiles.cloud/uploads/040d9f86f5fb8ebc4b2d062f806cd221/alambradosbelgrano%20-%20Alambres%20Distribuidora.png";
 var head = document.head;
 head.appendChild(link);
+
+
+// CENTRAR TITULO CATEGORIA
+
+const categoriaTitulos = document.querySelectorAll(".categoria-titulo");
+
+categoriaTitulos.forEach((categoria) => {
+  categoria.style.textAlign = "center";
+  categoria.style.display = "flex";
+  categoria.style.justifyContent = "center";
+  categoria.style.alignItems = "center";
+  categoria.style.fontSize = "25px";
+  categoria.style.width = "100%";
+})
+const enlaces = document.querySelectorAll('.categoria-titulo.imagen-fondo a');
+enlaces.forEach((enlace) => {
+  enlace.style.textAlign = "center";
+  enlace.style.display = "flex";
+  enlace.style.justifyContent = "center";
+  enlace.style.alignItems = "center";
+  enlace.style.fontSize = "25px";
+  enlace.style.width = "100%";
+});
