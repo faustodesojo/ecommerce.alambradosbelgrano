@@ -41,7 +41,7 @@ productos.forEach((producto) => {
 
 // OCULTAR IMG DE SLIDER CUANDO EL CARRITO ESTA ABIERTO
 
-const slider = document.querySelector(".slider-container");
+const slider = document.querySelector(".slider-container1");
 const carrito = document.getElementById("icono_resumen_pedido");
 function handleCarritoClassChange() {
   if (
@@ -89,11 +89,7 @@ categoriaTitulos.forEach((categoria) => {
   categoria.style.fontSize = "25px";
   categoria.style.width = "100%";
 })
-
-// Selecciona todos los elementos 'a' dentro del div con la clase "categoriaTitulos"
 const enlaces = document.querySelectorAll('.categoria-titulo.imagen-fondo a');
-
-// Itera sobre cada elemento 'a' y aplica los estilos
 enlaces.forEach((enlace) => {
   enlace.style.textAlign = "center";
   enlace.style.display = "flex";
