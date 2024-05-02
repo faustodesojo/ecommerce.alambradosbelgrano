@@ -98,3 +98,9 @@ enlaces.forEach((enlace) => {
   enlace.style.fontSize = "25px";
   enlace.style.width = "100%";
 });
+
+const elementosPrecioBox = document.querySelectorAll('.precio-box');
+
+elementosPrecioBox.forEach(function(elemento) {
+    elemento.style.display = 'none';
+});

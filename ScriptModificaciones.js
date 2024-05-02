@@ -41,7 +41,7 @@ productos.forEach((producto) => {
 
 // OCULTAR IMG DE SLIDER CUANDO EL CARRITO ESTA ABIERTO
 
-const slider = document.querySelector(".slider-container1");
+const slider = document.querySelector(".slider-container");
 const carrito = document.getElementById("icono_resumen_pedido");
 function handleCarritoClassChange() {
   if (
@@ -97,4 +97,10 @@ enlaces.forEach((enlace) => {
   enlace.style.alignItems = "center";
   enlace.style.fontSize = "25px";
   enlace.style.width = "100%";
+});
+
+const elementosPrecioBox = document.querySelectorAll('.precio-box');
+
+elementosPrecioBox.forEach(function(elemento) {
+    elemento.style.display = 'none';
 });
