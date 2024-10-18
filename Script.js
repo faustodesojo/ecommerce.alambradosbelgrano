@@ -104,3 +104,10 @@ const elementosPrecioBox = document.querySelectorAll('.precio-box');
 elementosPrecioBox.forEach(function(elemento) {
     elemento.style.display = 'none';
 });
+
+// CAMBIAR COLOR DE DESCRIPCION
+const ProductoDescripcion = document.querySelectorAll('.producto-descripcion b')
+
+ProductoDescripcion.forEach((ProductoDescripcion) =>{
+  ProductoDescripcion.style.color = "#fabb08"
+})
