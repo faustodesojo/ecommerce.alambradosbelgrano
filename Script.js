@@ -76,7 +76,6 @@ link.href =
 var head = document.head;
 head.appendChild(link);
 
-
 // CENTRAR TITULO CATEGORIA
 
 const categoriaTitulos = document.querySelectorAll(".categoria-titulo");
